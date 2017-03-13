@@ -30,6 +30,7 @@ default_preamble = r"""
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{newtxtext}
 \usepackage[libertine]{newtxmath}
 """
 
