@@ -49,7 +49,7 @@ default_params = {
 }
 
 
-if not hasattr(os.environ, 'LIBGS') and not find_library('libgs'):
+if not hasattr(os.environ, 'LIBGS') and not find_library('gs'):
     if sys.platform == 'darwin':
         # Fallback to homebrew Ghostscript on macOS
         homebrew_libgs = '/usr/local/opt/ghostscript/lib/libgs.dylib'
