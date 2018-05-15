@@ -174,7 +174,10 @@ def main():
         meta = {key: out[key] for key in out if key != 'svg'}
         sys.stderr.write(json.dumps(meta))
     except subprocess.CalledProcessError as exc:
+        # LaTeX prints errors on stdout instead of stderr (stderr is empty),
+        # dvisvgm to stderr, so print both
         print(exc.output.decode('utf-8'))
+        print(exc.stderr.decode('utf-8'))
         sys.exit(exc.returncode)
 
 
